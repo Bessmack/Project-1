@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 #navbar {
   display: flex;
   justify-content: space-evenly;
@@ -52,4 +53,7 @@
 #uList li:hover {
   color: #8a1c03;
   transform: scale(1.05);
+}
+#firstSection{
+  display: flex;
 }
