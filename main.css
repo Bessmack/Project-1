@@ -371,6 +371,7 @@ form{
   font-size: 12px;
   border-radius: 10px;
   font-weight: 800;
+  cursor: pointer;
 }
 .delete{
   color: white;
@@ -379,6 +380,7 @@ form{
   font-size: 12px;
   border-radius: 10px;
   font-weight: 800;
+  cursor: pointer;
 }
 footer{
   background-color: black;

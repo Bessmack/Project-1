@@ -11,13 +11,20 @@ document.querySelector("#about").addEventListener('mousedown', function(){
     footer.scrollIntoView({behavior:"smooth"});
     }
 )
+document.querySelector("#cat").addEventListener('mousedown', function(){
+    const category = document.getElementById("navbar2");
+    category.scrollIntoView({behavior:"smooth"});
+    }
+)
 document.querySelector(".cat").addEventListener('mousedown', function(){
     const category = document.getElementById("navbar2");
     category.scrollIntoView({behavior:"smooth"});
     }
 )
-
-
 document.getElementById("darkToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+document.querySelector("#home").addEventListener("mousedown", ()=>{
+    let homePage = document.getElementById("topNav");
+    homePage.scrollIntoView({behavior:"smooth"});
+})
