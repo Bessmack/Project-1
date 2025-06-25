@@ -16,8 +16,8 @@ document.querySelector(".cat").addEventListener('mousedown', function(){
     category.scrollIntoView({behavior:"smooth"});
     }
 )
-document.querySelector(".cat").addEventListener('mousedown', function(){
-    const category = document.getElementById("navbar2");
-    category.scrollIntoView({behavior:"smooth"});
-    }
-)
+
+
+document.getElementById("darkToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
