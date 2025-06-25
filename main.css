@@ -422,3 +422,15 @@ footer{
 .dark-mode #navbar{
   background-color: #0000006a;
 }
+.dark-mode #darkToggle{
+  background-color: #0000006a;
+  color: white;
+}
+#darkToggle{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
