@@ -57,3 +57,13 @@
 #firstSection{
   display: flex;
 }
+#pageImg{
+  min-width: 38rem;
+}
+.span{
+  color: #ff3c00;
+}
+#secondSection{
+  margin: 20px;
+}
+
