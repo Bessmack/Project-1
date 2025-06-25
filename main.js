@@ -172,6 +172,11 @@ function addProduct(){
 
 
 
+fetch('https://makeup-api.herokuapp.com/api/v1/products.json?')
+.then(res => res.json())
+.then(data => {
+    data.forEach(data => console.log(data))
+})
 
 
 
