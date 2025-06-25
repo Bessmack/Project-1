@@ -85,14 +85,16 @@
 .imgContainer {
   width: 400px;
   height: 320px;
-  border: none;
   border-radius: 10px;
+  border: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 12px;
-  font-size: 0; /* hide text "Sthing" */
-  cursor: pointer;
+  transition: 1s;
+}
+.imgContainer:hover{
+  transform: scale(1.05);
+  transition: 1s;
 }
 #secondSection h3 {
   font-size: 1.5rem;
@@ -141,4 +143,12 @@
 }
 #eighthDiv{
   background-image: url("https://cdn.pixabay.com/photo/2016/02/19/11/49/model-1209985_640.jpg");
+}
+.responsive-img {
+  width: 70%;
+  height: 70vh;
+  background-image: url('https://cdn.pixabay.com/photo/2016/02/19/11/49/model-1209985_640.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
