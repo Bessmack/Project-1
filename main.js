@@ -59,9 +59,22 @@ form.addEventListener('submit', (e)=>{
 let form2 = document.getElementById('form2');
 form2.addEventListener('submit', (e)=>{
     e.preventDefault();
+    createProduct();
 
     form2.reset();
 });
+
+function createProduct(){
+    let itemName = document.getElementById('productName').value;
+    let itemDescription = document.getElementById('productDescription').value;
+    let itemImage = document.getElementById('productImage').value;
+    let itemCategory = document.getElementById('productCategory').value;
+
+    console.log(itemName);
+    console.log(itemDescription);
+    console.log(itemImage);
+    console.log(itemCategory);
+}
 
 
 function renderProduct(product){
@@ -85,24 +98,8 @@ function renderProduct(product){
 };
 
 
-function renderItem(product){
-    const name = product.name;
-    const description = product.description;
-    const currency = product.currency;
-    const price = product.price;
-    const image = product.image_link;
 
-    let searchSection = document.getElementById('fourthSection');
-    let div = document.createElement('div');
-    div.innerHTML = `
-        <button class="imgContainer2" style="background-image: url('${image}'); background-size: cover;"></button>
-        <h3>${name}</h3>
-        <p>${description || "No description available."}</p>
-        <p>${currency || "No Currency"}: ${price || "FREE"}</p>
-        <button class="add2">ADD</button>`;
 
-    searchSection.appendChild(div);
-};
 
 
 // fetch(baseUrl)
