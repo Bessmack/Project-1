@@ -31,21 +31,48 @@ document.querySelector("#home").addEventListener("mousedown", ()=>{
 
 
 
-
-
 // Beginning of My TRUE Code
-
-
 
 const baseUrl = "https://makeup-api.herokuapp.com/api/v1/products.json?"
 const form = document.getElementById('form1');
 let form2 = document.getElementById('form2');
 
 
+
+
+document.getElementById('secondSection').addEventListener("click", function (e) {
+    if(e.target.classList.contains("add")){
+        e.preventDefault();
+
+        const elementDiv = e.target.closest('div');
+        let cloneDiv = elementDiv.cloneNode(true);
+        let addButton = cloneDiv.querySelector('.add')
+        if(addButton){
+            addButton.textContent = "DELETE";
+            addButton.classList.remove("add");
+            addButton.classList.add("delete");
+        }
+
+        document.getElementById('sixthSection').appendChild(cloneDiv)
+    }
+})
+
+
+
+
+
+document.getElementById('fourthSection').addEventListener("click", e => {
+    if(e.target.classList.contains("add2")){
+        e.preventDefault();
+        console.log(3);
+    };
+});
+
+
 document.getElementById('sixthSection').addEventListener("click", e => {
     if(e.target.classList.contains("delete")){
         e.preventDefault();
-        e.target.parentNode.remove();
+        e.target.closest('div').remove();
     };
 });
 
@@ -82,7 +109,6 @@ form2.addEventListener('submit', (e)=>{
 
 
 
-
 function renderItem(product){
     const name = product.name;
     const description = product.description;
@@ -115,6 +141,7 @@ function addProduct(){
     div.innerHTML = `
         <button class="imgContainer3" style="background-image: url('${itemImage}'); background-size: cover;">hello</button>
         <h3>${itemName}</h3>
+        <p>${itemDescription}</p>
         <p>KES : ${itemPrice}</p>
         <button class="delete">DELETE</button>`;
 
@@ -126,22 +153,6 @@ function addProduct(){
     console.log(itemCategory);
     console.log(itemPrice);
 }
-
-
-document.querySelectorAll('.add').forEach(button => {
-    button.addEventListener('click', e => {
-        e.preventDefault();
-        console.log(1 +2 +3);
-    });
-});
-
-document.querySelectorAll('.add2').forEach(button => {
-    button.addEventListener('click', (e)=>{
-        e.preventDefault();
-        console.log(1 +2 +3);
-    });
-});
-
 
 
 
