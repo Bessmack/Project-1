@@ -58,6 +58,22 @@ document.getElementById('secondSection').addEventListener("click", function (e) 
 })
 
 
+document.getElementById('fourthSection').addEventListener("click", function (e) {
+    if(e.target.classList.contains("add2")){
+        e.preventDefault();
+
+        const elementDiv = e.target.closest('div');
+        let cloneDiv = elementDiv.cloneNode(true);
+        let addButton = cloneDiv.querySelector('.add2')
+        if(addButton){
+            addButton.textContent = "DELETE";
+            addButton.classList.remove("add2");
+            addButton.classList.add("delete");
+        }
+
+        document.getElementById('sixthSection').appendChild(cloneDiv)
+    }
+})
 
 
 
