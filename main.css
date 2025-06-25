@@ -1,11 +1,11 @@
-
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 #navbar {
+  overflow: hidden;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -66,6 +66,7 @@
   color: #ff3c00;
 }
 #secondSection {
+  overflow: hidden;
   max-width: 1200px;
   margin: auto;
 }
@@ -225,8 +226,10 @@
 }
 
 #catH2 {
+  text-align: center;
   margin: auto;
-  width: 90%;
+  width: 80%;
+  font-size: 40px;
 }
 #navbar2 {
   margin: auto;
@@ -271,6 +274,7 @@
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
+
 .imgContainer2{
   background-image: url("https://plus.unsplash.com/premium_photo-1686149811450-c55a5fa3851f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGJsYWNrJTIwb3JhbmdlfGVufDB8fDB8fHww");
   width: 100%;
@@ -315,7 +319,7 @@
   border-radius: 10px;
 }
 
-form{
+#form2{
   display: grid;
   grid-template-rows: 4;
 }
@@ -337,8 +341,11 @@ form{
   border-radius: 7px;
 }
 #myList{
+  margin: auto;
+  width: 90%;
   margin-bottom: 30px;
   margin-top: 30px;
+  font-size: 40px;
 }
 
 #sixthSection{
@@ -432,5 +439,25 @@ footer{
   padding-right: 4px;
   border-radius: 10px;
   cursor: pointer;
+}
+#form1{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  margin-top: 0;
+  align-items: center;
+}
+#inpSearch{
+  height: 50px;
+  width: 200px;
+  padding-left: 5px;
+  border-radius: 20px;
+}
+#ok{
+  padding: 6px;
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
