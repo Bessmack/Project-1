@@ -54,33 +54,16 @@ form.addEventListener('submit', (e)=>{
     form.reset();
 });
 
-function renderItem(product){
-    const name = product.name;
-    const description = product.description;
-    const currency = product.currency;
-    const price = product.price;
-    const image = product.image_link;
-
-    let searchSection = document.getElementById('fourthSection');
-    let div = document.createElement('div');
-    div.innerHTML = `
-        <button class="imgContainer2" style="background-image: url('${image}'); background-size: cover;"></button>
-        <h3>${name}</h3>
-        <p>${description || "No description available."}</p>
-        <p>${currency || "No Currency"}: ${price || "FREE"}</p>
-        <button class="add2">ADD</button>`;
-
-    searchSection.appendChild(div);
-};
 
 
-
-document.getElementById('form2').addEventListener('submit', (e)=>{
+let form2 = document.getElementById('form2');
+form2.addEventListener('submit', (e)=>{
     e.preventDefault();
-    let itemName = document.getElementById('productName').value;
 
-    console.log(itemName);
+    form2.reset();
 });
+
+
 function renderProduct(product){
     const brand = product.brand;
     const name = product.name;
@@ -99,6 +82,26 @@ function renderProduct(product){
     console.log(price);
     console.log(colors);
     console.log(image);
+};
+
+
+function renderItem(product){
+    const name = product.name;
+    const description = product.description;
+    const currency = product.currency;
+    const price = product.price;
+    const image = product.image_link;
+
+    let searchSection = document.getElementById('fourthSection');
+    let div = document.createElement('div');
+    div.innerHTML = `
+        <button class="imgContainer2" style="background-image: url('${image}'); background-size: cover;"></button>
+        <h3>${name}</h3>
+        <p>${description || "No description available."}</p>
+        <p>${currency || "No Currency"}: ${price || "FREE"}</p>
+        <button class="add2">ADD</button>`;
+
+    searchSection.appendChild(div);
 };
 
 
