@@ -172,13 +172,11 @@ function addProduct(){
 
 
 
-fetch('https://makeup-api.herokuapp.com/api/v1/products.json?')
-.then(res => res.json())
-.then(data => {
-    data.forEach(data => console.log(data))
-})
-
-
+// fetch('https://makeup-api.herokuapp.com/api/v1/products.json?')
+// .then(res => res.json())
+// .then(data => {
+//     data.forEach(data => console.log(data))
+// })
 
 
 
@@ -242,5 +240,4 @@ fetch('https://makeup-api.herokuapp.com/api/v1/products.json?')
 // https://www.affirmations.dev/
 // https://makeup-api.herokuapp.com/api/v1/products.json?
 // ONE PRODUCT COMPANY = https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
-
 
