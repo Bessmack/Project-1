@@ -306,10 +306,33 @@
   margin: auto;
   width: 90%;
 }
+#fifthSection{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-
-
-
-
-
-
+form{
+  display: grid;
+  grid-template-rows: 4;
+}
+.label{
+  margin: 10px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 800;
+}
+.input{
+  margin: auto;
+  width: 100%;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  font-size: 25px;
+  padding-left: 15px;
+  border-left: 7px solid rgb(255, 81, 0);
+  border-radius: 7px;
+}
+#myList{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
