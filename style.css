@@ -442,6 +442,47 @@ footer{
   color: white;
 }
 
+/* Mobile View  */
+@media (max-width: 480px) {
+  #profile{
+    width: 100%;
+    justify-content: center;
+  }
+  #secondSection > div,
+  #fourthSection,
+  #sixthSection{
+    grid-template-columns: 1fr;
+  }
+  #secondSection h2,
+  #catH2{
+    font-size: 2rem;
+  }
+  #thirdSection button p,
+  #thirdSection button h3{
+    font-size: 1.2rem;
+  }
+  .label{
+    font-size: 1.2rem;
+  }
+  .input{
+    font-size: 1rem;
+    height: 40px;
+  }
+  
+  #footer li{
+    font-size: 1.2rem;
+  }
+  
+  #form1{
+    justify-content: center;
+    margin-right: 0;
+  }
+  #inpSearch{
+    width: 70%;
+  }
+}
+
+
 .dark-mode .add,
 .dark-mode .add2 {
   background-color: #ff5722;
@@ -498,4 +539,3 @@ footer{
   background-color: #ccc;
   border-radius: 10px;
 }
-
