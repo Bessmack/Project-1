@@ -14,7 +14,7 @@ document.querySelector("#about").addEventListener('mousedown', function(){
 )
 //Once it is clicked, it takes the user to the second navbar area
 document.querySelector("#cat").addEventListener('mousedown', function(){
-    const category = document.getElementById("navbar2");
+    const category = document.getElementById("footerSection");
     category.scrollIntoView({behavior:"smooth"});
     }
 )
