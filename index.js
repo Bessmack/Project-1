@@ -1,17 +1,10 @@
-//For every clicked list on the second navbar, once clicked it goes to the product section
-document.querySelectorAll("#ul2 li").forEach(li => {
-  li.addEventListener('mousedown', function(){
-    const id = li.textContent.toLowerCase();
-    const section = document.querySelector(`#${id}Section`);
-    section.scrollIntoView({behavior:"smooth"});
-  });
-});
 //Once the ABOUT US button is clicked, it leads the user to the footer where the about is described
 document.querySelector("#about").addEventListener('mousedown', function(){
     const footer = document.getElementById("footerSection");
     footer.scrollIntoView({behavior:"smooth"});
     }
 )
+
 //Once it is clicked, it takes the user to the second navbar area
 document.querySelector("#cat").addEventListener('mousedown', function(){
     const category = document.getElementById("footerSection");
