@@ -1,3 +1,4 @@
+//For every clicked list on the second navbar, once clicked it goes to the product section
 document.querySelectorAll("#ul2 li").forEach(li => {
   li.addEventListener('mousedown', function(){
     const id = li.textContent.toLowerCase();
@@ -5,25 +6,29 @@ document.querySelectorAll("#ul2 li").forEach(li => {
     section.scrollIntoView({behavior:"smooth"});
   });
 });
-
+//Once the ABOUT US button is clicked, it leads the user to the footer where the about is described
 document.querySelector("#about").addEventListener('mousedown', function(){
     const footer = document.getElementById("footerSection");
     footer.scrollIntoView({behavior:"smooth"});
     }
 )
+//Once it is clicked, it takes the user to the second navbar area
 document.querySelector("#cat").addEventListener('mousedown', function(){
     const category = document.getElementById("navbar2");
     category.scrollIntoView({behavior:"smooth"});
     }
 )
+//Once it is clicked, it takes the user to the second navbar area
 document.querySelector(".cat").addEventListener('mousedown', function(){
     const category = document.getElementById("navbar2");
     category.scrollIntoView({behavior:"smooth"});
     }
 )
+//Once it is clicked, it takes the user to a dark-mode setting
 document.getElementById("darkToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 });
+//Once it is clicked, it takes the user to the top
 document.querySelector("#home").addEventListener("mousedown", ()=>{
     let homePage = document.getElementById("topNav");
     homePage.scrollIntoView({behavior:"smooth"});
@@ -33,13 +38,13 @@ document.querySelector("#home").addEventListener("mousedown", ()=>{
 
 // Beginning of My TRUE Code
 
+//Declare variables
 const baseUrl = "https://makeup-api.herokuapp.com/api/v1/products.json?"
 const form = document.getElementById('form1');
 let form2 = document.getElementById('form2');
 
 
-
-
+//Declare what happens when one presses the add button on elements in the 'secondSection'
 document.getElementById('secondSection').addEventListener("click", function (e) {
     if(e.target.classList.contains("add")){
         e.preventDefault();
@@ -57,7 +62,7 @@ document.getElementById('secondSection').addEventListener("click", function (e) 
     }
 })
 
-
+//Declare what happens when one presses the add button on elements in the 'fourthSection'
 document.getElementById('fourthSection').addEventListener("click", function (e) {
     if(e.target.classList.contains("add2")){
         e.preventDefault();
@@ -76,15 +81,7 @@ document.getElementById('fourthSection').addEventListener("click", function (e) 
 })
 
 
-
-document.getElementById('fourthSection').addEventListener("click", e => {
-    if(e.target.classList.contains("add2")){
-        e.preventDefault();
-        console.log(3);
-    };
-});
-
-
+//Targetting the 'sixthSection' and add the DELETE functionality if clicked
 document.getElementById('sixthSection').addEventListener("click", e => {
     if(e.target.classList.contains("delete")){
         e.preventDefault();
@@ -93,14 +90,7 @@ document.getElementById('sixthSection').addEventListener("click", e => {
 });
 
 
-document.querySelectorAll('.delete').forEach(button => {
-    button.addEventListener('click', (e)=>{
-        e.preventDefault();
-        console.log(1 +2 +3);
-    });
-});
-
-
+//Submit the form details by a user and pass it to the URL and find more products with tha name
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     let searchValue = document.getElementById("inpSearch").value.toLowerCase();
@@ -114,7 +104,7 @@ form.addEventListener('submit', (e)=>{
     form.reset();
 });
 
-
+//The submit button takes input by a user and calls the addProduct Function which then displays the item as described by the user
 form2.addEventListener('submit', (e)=>{
     e.preventDefault();
     addProduct();
@@ -124,7 +114,7 @@ form2.addEventListener('submit', (e)=>{
 
 
 
-
+//This functions displays an object's properties such as image, name, description and the currency and amount
 function renderItem(product){
     const name = product.name;
     const description = product.description;
